@@ -8,7 +8,7 @@ export class FeatureExtractionPipelineClass {
     static async getInstance(progress_callback = null) {
       if (this.instance === null) {
         // NOTE: Uncomment this to change the cache directory
-        env.cacheDir = './.cache';
+        env.cacheDir = './public';
   
         this.instance = pipeline(this.task, this.model, { progress_callback });
       }

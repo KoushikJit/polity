@@ -9,6 +9,8 @@ export async function POST(req: Request, res: Response) {
   });
   const {question} = await req.json();
   console.log(question);
+  console.log("REAd NEw");
+
   const response = await queryPineconeVectorStoreAndQueryLLM(client, indexName, question);
   console.log(response);
   return new Response(response, { status: 200 });
